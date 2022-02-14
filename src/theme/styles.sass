@@ -1,0 +1,245 @@
+@use './base' as *
+@use './layout'
+@use './components'
+// WORK
+#work
+  @include flex
+  place-content: center
+  h2
+    flex-basis: 100%
+    margin: 1em 0
+  h3
+    font-size: 2rem
+    color: var(--secondary)
+    text-transform: uppercase
+  article
+    min-width: 18rem
+    flex-basis: 30%
+    text-align: center
+  p
+    padding: 1em
+  .icon
+    margin: 1em auto
+    color: var(--secondary)
+
+/* PROFILE
+
+#about
+  article
+    @include flex
+    gap: 0
+    margin-top: 2em
+    border: 1px solid var(--secondary)
+    box-shadow: 0px 2px 8px 1px #000
+  div
+    @include flex
+    flex: 1
+    flex-direction: column
+    min-width: 35rem
+    padding: 2em
+    background: var(--accent)
+    text-align: center
+    img
+      max-width: 20rem
+      margin: 0 auto
+      border-radius: 100%
+    h3
+      font-size: 2.5rem
+    p
+      font-size: 2rem
+    ul
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+    li
+      padding: 0.5em 1em
+      margin: 0.5em
+      border: 1px solid var(--secondary)
+      border-radius: 0.5rem
+      box-shadow: 1px 1px 5px 1px var(--secondary)
+      background: var(--secondary)
+      transition: var(--trans)
+      @include hover
+        opacity: 0.8
+      a
+        color: var(--primary)
+  aside
+    min-width: 35rem
+    padding: 2em
+    flex: 1
+    background: var(--secondary)
+    color: var(--primary)
+    li
+      position: relative
+      margin: 20px 0
+      > span
+        display: block
+        height: 4px
+        background-color: #353b48
+        border: 1px solid rgba(0, 0, 0, 0.3)
+        border-radius: 3px
+        box-shadow: 0px 0px 10px #2187e7b3
+        overflow: hidden
+      span span
+        height: 4px
+        float: left
+        background: #2187e7
+        &:after
+          position: absolute
+          top: 0
+          right: 1%
+          font-size: 1.5rem
+          display: block
+    .html
+      @include animWidth(90%)
+      &:after
+        content: "90%"
+    .css
+      @include animWidth(90%)
+      &:after
+        content: "90%"
+    .javascript
+      @include animWidth(60%)
+      &:after
+        content: "60%"
+    .jquery
+      @include animWidth(45%)
+      &:after
+        content: "45%"
+    .nodejs
+      @include animWidth(30%)
+      &:after
+        content: "30%"
+    .php
+      @include animWidth(65%)
+      &:after
+        content: "65%"
+    .git
+      @include animWidth(70%)
+      &:after
+        content: "70%"
+    .wordpress
+      @include animWidth(75%)
+      &:after
+        content: "75%"
+    .joomla
+      @include animWidth(40%)
+      &:after
+        content: "40%"
+    .gimp
+      @include animWidth(45%)
+      &:after
+        content: "45%"
+    .inkscape
+      @include animWidth(80%)
+      &:after
+        content: "80%"
+// GRID PROJECTS
+#projects
+  img
+    width: 100%
+  div
+    width: 100%
+    padding: 2em
+    display: grid
+    grid-template-columns: repeat(auto-fit, 25rem)
+    place-content: center
+    gap: 1em
+    color: var(--primary)
+  article, figure
+    position: relative
+  figcaption
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 0.2em
+    background: var(--secondary)
+    font-size: 1.4em
+    text-align: center
+  article
+    div
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      gap: 1em
+      place-content: center
+      background: rgba(25, 51, 77, 0.8)
+      color: antiquewhite
+      opacity: 0
+      text-align: center
+      transition: var(--trans)
+      @include hover
+        opacity: 1
+
+/* Contact
+#contact
+  @include flex
+  > h2
+    flex-basis: 100%
+  address
+    flex: 1
+    align-self: center
+    justify-self: center
+    font-size: 2em
+    @media (max-width: 960px)
+      order: 3
+      text-align: center
+  .adr span
+    display: block
+    @media (max-width: 960px)
+      display: inline-block
+  form
+    @include flex
+    place-content: center
+    max-width: 72rem
+    margin: 5rem auto
+    padding: 3rem
+    background: #161616
+    border-radius: 0.5rem
+    box-shadow: 0px 0px 5px black, 2px 2px 5px black, 0px 0px 8px black inset
+    div
+      flex: 1
+      flex-basis: 100%
+      position: relative
+      margin: 1rem 0
+    .small-input
+      flex: 1 1 45%
+      min-width: 20rem
+    input, textarea
+      padding: 2rem
+      background-color: #2d2d2d
+      border: 0
+      border-radius: 0.5rem
+      color: white
+      font-size: 1rem
+      width: 100%
+    input:focus, textarea:focus
+      outline: 0
+    input:focus ~ label, textarea:focus ~ label
+      font-size: 0.75em
+      color: #999
+      top: -5px
+      transition: all 0.225s ease
+    label
+      color: #999
+      padding: 1rem 1.5rem
+      position: absolute
+      top: 0.5rem
+      left: 0
+      transition: all 0.25s ease
+    textarea
+      min-height: 15em
+    .btn
+      background: var(--secondary)
+      color: var(--accent)
+      @include hover
+        background: var(--accent)
+        color: var(--secondary)
+// #contact > div
+//   background-color: var(--secondary)

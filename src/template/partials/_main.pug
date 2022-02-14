@@ -1,0 +1,167 @@
+main
+  section#work(aria-label='My Work')
+    h2 I Build Things For The Web
+    article
+      +icon('accessibility-icon')
+      h3 Accessibility
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, incidunt numquam cumque facere quos illum deserunt sit corporis ab perspiciatis.
+    article
+      +icon('responsive-icon')
+      h3 Responsive
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, incidunt numquam cumque facere quos illum deserunt sit corporis ab perspiciatis.
+    article
+      +icon('seo-icon')
+      h3 Seo
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, incidunt numquam cumque facere quos illum deserunt sit corporis ab perspiciatis.
+  section#about(aria-label='About Me')
+    h2 About Me
+    article
+      div
+        img(src='https://randomuser.me/api/portraits/men/32.jpg' alt='John Doe')
+        h3 Who am I?
+        p
+          | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta vitae quaerat, mollitia perspiciatis ratione nisi doloremque nemo non, doloribus dicta unde ipsam voluptatum iste fugiat expedita suscipit aperiam quasi nam?
+        ul
+          li
+            a(href='https://www.freecodecamp.org/ravenn' target='_blank') FreeCodeCamp
+          li
+            a(href='https://linkedin.com/in/PabloPenia' target='_blank') Linkedin
+          li
+            a(href='https://github.com/pablopenia' target='_blank') GitHub
+          li
+            a(href='mailto:pablopenia.dev@gmail.com' target='_blank') Gmail
+      aside
+        h3 My Skills
+        ul
+          li
+            h4 HTML
+            span
+              span.html
+          li
+            h4 CSS
+            span
+              span.css
+          li
+            h4 Javascript
+            span
+              span.javascript
+          li
+            h4 JQuery
+            span
+              span.jquery
+          li
+            h4 NodeJS
+            span
+              span.nodejs
+          li
+            h4 PHP
+            span
+              span.php
+          li
+            h4 Wordpress
+            span
+              span.wordpress
+          li
+            h4 Joomla
+            span
+              span.joomla
+          li
+            h4 Inkscape
+            span
+              span.inkscape
+  section#projects(aria-label='Latest Projects')
+    h2 Latest Projects
+    div
+      article
+        figure
+          img(src='https://picsum.photos/id/1025/200' alt='')
+          figcaption Project 1
+        div
+          h3 Project 1
+          p Javascript / Html
+          a.btn(href='#') Learn More
+      article
+        figure
+          img(src='https://picsum.photos/id/102/200' alt='')
+          figcaption Project 2
+        div
+          h3 Project 2
+          p Javascript / Html
+          a.btn(href='#') Learn More
+      article
+        figure
+          img(src='https://picsum.photos/id/1019/200' alt='')
+          figcaption Project 3
+        div
+          h3 Project 3
+          p Javascript / Html
+          a.btn(href='#') Learn More
+      article
+        figure
+          img(src='https://picsum.photos/id/1022/200' alt='')
+          figcaption Project 4
+        div
+          h3 Project 4
+          p Javascript / Html
+          a.btn(href='#') Learn More
+      article
+        figure
+          img(src='https://picsum.photos/id/1027/200' alt='')
+          figcaption Project 5
+        div
+          h3 Project 5
+          p Javascript / Html
+          a.btn(href='#') Learn More
+      article
+        figure
+          img(src='https://picsum.photos/id/103/200' alt='')
+          figcaption Project 6
+        div
+          h3 Project 6
+          p Javascript / Html
+          a.btn(href='#') Learn More
+      article
+        figure
+          img(src='https://picsum.photos/id/1031/200' alt='')
+          figcaption Project 7
+        div
+          h3 Project 7
+          p Javascript / Html
+          a.btn(href='#') Learn More
+      article
+        figure
+          img(src='https://picsum.photos/id/1033/200' alt='')
+          figcaption Project 8
+        div
+          h3 Project 8
+          p Javascript / Html
+          a.btn(href='#') Learn More
+  section#contact(aria-label='Contact Me')
+    h2 Contact
+    address#hcard-John-Doe.vCard
+      p.fn
+        a.url(href='#') John Doe
+      p
+      p.adr
+        span.street-address Main Av. 9999,
+        span.region Montevideo,
+        span.country-name Uruguay.
+        span.postal-code P.C. 99999
+      p.tel +598 (0)XXXX XXXXXX
+    form
+      div
+        input#name(name='name' type='text')
+        label(for='name') Name
+      div.small-input
+        input#email(type='email' name='email')
+        label(for='email') Email
+      div.small-input
+        input#phone(type='tel' name='phone')
+        label(for='phone') Phone
+      div
+        textarea#message(name='message' cols='30' rows='10')
+        label(for='message') Message
+      button.btn(type='submit') Send Message

@@ -1,0 +1,11 @@
+mixin icon(elId, elClass)
+  - elClass = elClass || false
+  span.icon(class = elClass)
+    +svg(elId)
+  if block 
+    block
+    
+mixin svg(elId)
+  - elId = '#' + elId
+  svg
+    use(xlink:href= elId)

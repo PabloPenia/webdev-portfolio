@@ -1,0 +1,70 @@
+@use 'sass:map'
+@use 'sass:string'
+$breakpoints: ( 'smaller': (min-width:600px), 'small': ( min-width: 768px ), 'medium': ( min-width: 960px ), 'large': ( min-width: 1366px ) )
+
+// BREAKPOINTS
+@mixin breakpoint($key)
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $key)
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $key))}
+      @content
+  @else
+    @warn "Unfortunately, no value could be retrieved from `#{$key}`. " + "Available breakpoints are: #{map-keys($breakpoints)}."
+
+// HOVER STATES
+@mixin hover()
+  @media (hover: hover) and (pointer: fine)
+    &:hover, &:focus
+      transition: var(--trans)
+      @content
+
+@mixin no-hover()
+  @media (hover: none)
+    &:active, &:focus
+      transition: var(--trans)
+      @content
+
+// dinamically setting up keyframes for profile section
+
+@mixin animWidth($width)
+  $name: #{unique-id()}
+  animation: $name 2s forwards
+  @keyframes #{$name}
+    from
+      width: 0%
+    to
+      width: #{$width}
+
+// MIXTENDS (for using on mediaqueries)
+// use on mediaqueries > @include flex(false). Using without mediaqueries > @include flex
+@mixin flex($extend: true)
+  @if $extend
+    @extend %flex
+  @else
+    display: flex
+    flex-wrap: wrap
+    gap: 1em
+    place-content: center space-between
+
+.btn
+  max-width: 80%
+  margin: 0 auto
+  padding: 0.5em 2em 0.5em 2.5em
+  border: 1px solid var(--primary)
+  color: var(--primary)
+  font-family: 'Libre Baskerville', serif
+  transition: var(--trans)
+  @include hover
+    border: 1px solid var(--secondary)
+    background-color: var(--secondary)
+  @include no-hover
+    border: 1px solid var(--secondary)
+    background-color: var(--secondary)
+    transform: scale(1.1)
+
+%flex
+  display: flex
+  flex-wrap: wrap
+  gap: 1em
+  place-content: center space-between
